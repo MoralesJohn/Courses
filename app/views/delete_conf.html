@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Course</title>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="/static/css/styles.css" type="text/css">
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+</head>
+<body>
+	<div id="wrapper">
+		<h5>Are you sure you want to delete this course?</h5>
+		<table class="table">
+			<thead></thead>
+			<tbody>
+				<tr>
+					<td>Name:</td>
+					<td>{{ data[0]["title"]}}</td>
+				</tr>
+				<tr>
+					<td>Description:</td>
+					<td>{{ data[0]["descr"]}}</td>
+				</tr>
+			</tbody>
+		</table>
+		<a href="/"><button class="btn btn-default">No</button></a>
+		<a href="/delete_submit/{{ id }}"><button class="btn btn-danger">Yes! I want to delete this course.</button></a>
+	</div>  <!-- #wrapper -->
+
+</body>
+</html>
